@@ -1,0 +1,16 @@
+"/var/log/nginx/error.log", "/var/log/nginx/access-error.log" {
+  missingok
+  notifempty
+  daily
+  rotate 7
+  dateext
+  dateformat _%Y%m%d
+  create 644 root root
+  compress
+  delaycompress
+  notifempty
+  sharedscripts
+  postrotate
+      docker kill -s USR1 nginx_sample_web_1
+  endscript
+}
