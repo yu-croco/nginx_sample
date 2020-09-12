@@ -1,0 +1,2 @@
+# Nginx Sample
+Nginxでリバースプロキシをするサンプル
