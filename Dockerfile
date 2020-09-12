@@ -6,5 +6,5 @@ RUN ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime &&\
     ln -sf  /usr/share/zoneinfo/Asia/Tokyo /etc/localtime &&\
     apt-get update && apt-get -y install logrotate
 
-COPY ./config/server.conf /etc/nginx/nginx.conf
+COPY ./config/nginx.conf /etc/nginx/nginx.conf
 COPY config/nginx /etc/logrotate.d/nginx
